@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 html{
-    font-size: 10px;
+    font-size: 6px;
 }
 body{
     font-family: "Lato", sans-serif;
@@ -15,12 +15,59 @@ body{
 }
 
 .container{
-    width: 1140px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+.col{
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+
+
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+    html{
+        font-size: 7px;
+    }
+    
+}
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+    html{
+        font-size: 8px;
+    }
+    .col{
+        width: 50%;
+    }
+}
+@media (min-width:992px){
+    .container{
+        max-width: 960;
+    }
+    html{
+        font-size: 9px;
+    }
+    .col{
+        width: 33.33%;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        max-width: 1140px;
+    }
+    html{
+        font-size: 10px;
+    }
+}
+
 a{
     text-decoration: none;
 }
@@ -30,6 +77,59 @@ a{
     display: block;
     clear: both;
 }
+/* button */
+.btn-large{
+    font-size: 2rem;
+    padding: 2.2rem 1.6rem;
+
+}
+
+.btn{
+    margin-top: 2rem;
+    padding: 2.2rem 1.6rem;
+    font-weight: 400;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn-social{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 0%;
+}
+
+.btn-outline{
+    color: white;
+    border-color: white;
+    background-color: transparent;
+
+}
+
+.btn-outline:hover{
+    color:#212529;
+    background-color: white;
+}
+
+.btn-primary{
+    background-color: aquamarine;
+    border-color: aquamarine;
+    padding: 1.2rem 1rem;
+    color: white;
+}
+.btn-primary:hover{
+    background-color: #128f76;
+    border-color: #128f76;
+}
+
+/* button finish */
+
 /* Navbar */
 nav{
     position: fixed;
@@ -73,12 +173,52 @@ nav{
 ul{
     list-style-type: none;
 }
+
+section{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
 #nav-links .nav-link:hover{
     color: aquamarine;
 }
+
+#nav-links .nav-icon{
+    display: none;
+}
+@media (max-width:992px){
+    #logo-box{
+        float: none;
+        text-align: left;
+    }
+    #nav-links{
+        float: none;
+    }
+    #nav-links .nav-link{
+        font-size: 2rem;
+        padding-left: 0;
+    }
+    #nav-links .nav-item{
+        float: none;
+        text-align: left;
+    }
+    #nav-links .nav-icon{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 3rem;
+    }
+    #nav-links.responsive li:not(:first-child){
+        display: none;
+    }
+}
+
+/* Header */
 header{
     background-color: aquamarine;
-    height: 1500px;
+    height: 1000px;
     padding-top: calc(114px + 6rem);
     text-align: center;
 }
@@ -135,21 +275,13 @@ header h2{
 }
 /* Portfolio */
 #portfolio{
-    height: 600px;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    text-align: center;
 
 }
 #portfolio h2{
     font-size: 4.8rem;
     color: gray;
 }
-.col{
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-}
+
 .portfolio-item{
     background-color:saddlebrown ;
     height: 100%;
@@ -161,6 +293,7 @@ header h2{
 }
 .portfolio-item img{
     display: block;
+    border-radius: 13px;
 }
 .img-overlay{
     position: absolute;
@@ -183,4 +316,108 @@ header h2{
 .portfolio-item:hover .img-overlay{
     opacity: 0.8;
     
+}
+/* portfolio finish */
+
+/* about */
+#about{
+    background-color:aquamarine;
+    color: white;
+}
+
+#about h2{
+    font-size: 4.8rem;
+
+}
+
+#about-text{
+    text-align: left;
+}
+#about-text .left{
+    float: none;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 25px;
+}
+#about-text .right{
+    float: none;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 5px;
+}
+#about-text .text{
+    font-size: 2rem;
+}
+@media (min-width:992px){
+    #about-text .left{
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 210px;
+    }
+    #about-text .right{
+        float: right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+    }
+}
+
+/* about finish */ 
+/* Contact */
+#contact h2{
+    font-size: 4.8rem;
+    color: #2c3e50;
+}
+
+#contact-form{
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group{
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+.form-group input, .form-group textarea{
+    border: none;
+    width: 100%;
+    display: block;
+    font-size: 2.4rem;
+}
+.form-group input:focus{
+    outline: 0;
+}
+.form-group textarea:focus{
+    outline: 0;
+}
+/* contact finish */
+
+/* Footer */
+footer{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #2c3E4F;
+    color: white;
+    text-align: center;
+}
+footer h4{
+    font-size: 2.4rem;
+}
+footer p{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+footer li{
+    display: inline-block;
+    margin-right:1rem ;
+}
+.copyright{
+    background-color: #212529;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    color: white;
+    text-align: center;
 }
