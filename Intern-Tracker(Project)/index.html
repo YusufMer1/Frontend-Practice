@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <h1>Staj Takip Sistemi</h1>
+    <!--Dashboard-->
+    <div class="dashboard">
+        <div class="card">Toplam: 0</div>
+        <div class="card">Kabul: 0</div>
+        <div class="card">Red: 0</div>
+    </div>
+    <!--intern form-->
+    <form action="" id="internForm">
+        <input class="input" type="text" placeholder="Şirket adı">
+        <input class="input" type="text" placeholder="Pozisyon">
+        <input class="input" type="date">
+    
+    
+        <select >
+          <option value="Başvruldu">Başvuruldu</option>
+          <option value="Görüşme" style="background-color: yellow;">Görüşme</option>
+          <option value="Kabul" style="background-color: green;">Kabul</option>
+          <option value="Red" style="background-color: rgb(245, 80, 80);">Red</option>
+        </select>
+
+        <button type="submit">Ekle</button>
+
+    </form>
+    <!--list-->
+    <div id="list"></div>
+    <script src="app.Js"></script>
+</body>
+</html>
